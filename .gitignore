@@ -1,35 +1,78 @@
-# --- Операционная система ---
+# ============================================
+# Windows
+# ============================================
 Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 Desktop.ini
-.DS_Store
+$RECYCLE.BIN/
+*.lnk
 
-# --- Редакторы и IDE ---
-.vscode/
+# ============================================
+# VS Code
+# ============================================
+.vscode/*
+# но сохраняем в репозитории общие настройки команды (если появятся)
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.code-workspace
+
+# ============================================
+# Редакторы / прочее
+# ============================================
 .idea/
 *.swp
 *.swo
+*~
 
-# --- Node.js / JavaScript ---
+# ============================================
+# Node.js / JavaScript / TypeScript
+# ============================================
+
+# Зависимости
 node_modules/
+.pnp/
+.pnp.js
+
+# Результаты сборки
 dist/
 build/
+out/
+*.tsbuildinfo
+
+# Покрытие тестов
+coverage/
+.nyc_output/
+
+# Логи и метрики
+logs/
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# --- Python ---
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-env/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+# Кэш пакетных менеджеров
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnpm-store/
+.eslintcache
+.cache/
 
-# --- Секреты и окружение ---
+# Секреты и окружение
 .env
 .env.*
 !.env.example
 
-# --- Git ---
+# ============================================
+# Прочее
+# ============================================
 *.orig
+.DS_Store
