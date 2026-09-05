@@ -1,0 +1,32 @@
+# VibeCourseSuperBot — правила для Cline
+
+## Проект
+- Проект учебный: пишем простой, понятный код без лишней абстракции.
+- Простой Telegram-бот на TypeScript (Node.js 24, ESM).
+- Стек: TypeScript (strict), tsx для разработки, tsc для сборки.
+
+## Ключевые соглашения
+- Код пишем в `src/`, модули ESM, импорты с расширением `.js` (NodeNext).
+- Строгий TypeScript: `strict`, `noUnusedLocals`, `noUnusedParameters`.
+- Код максимально простой: только самое необходимое, без лишних функций, типов, обработок и украшательств.
+- Комментарии и сообщения — на русском.
+- Переменные окружения читаются только через `src/config.ts` (сейчас это `BOT_TOKEN`).
+
+## Секреты и .env
+- Файл `.env` (с токеном бота) НЕ коммитить — он в `.gitignore`.
+- Шаблон переменных — `.env.example` (коммитится, значения пустые).
+- Никогда не выводить токены и секреты в логах, коде и коммитах.
+
+## Git
+- Ветка `main`, remote `origin` = https://github.com/victorlitvin/VibeCourseSuperBot
+- Коммиты с понятным описанием; после изменений — push в `origin/main`.
+
+## npm-скрипты
+- `dev`: `tsx watch --env-file=.env src/index.ts`
+- `typecheck`: `tsc --noEmit`
+- `build`: `tsc`
+- `start`: `node --env-file=.env dist/index.js`
+
+## Статус
+- Telegram-бот реализован без библиотек — напрямую через Bot API (long polling на встроенном `fetch`).
+- `src/index.ts` — простой бот: принимает сообщения и печатает их текст в консоль.
