@@ -1,7 +1,8 @@
 # VibeCourseSuperBot
 
 Простой учебный Telegram-бот на TypeScript. Работает без сторонних библиотек —
-напрямую через Bot API с long polling на встроенном `fetch`.
+напрямую через Bot API с long polling на встроенном `fetch`. Задача бота — показать, 
+как работает long polling «под капотом».
 
 ## Что умеет бот
 
